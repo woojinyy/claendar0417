@@ -1,0 +1,13 @@
+.editor {
+    flex-basis: 30%;
+    border-right: 1px solid lightgray; /* editor와 preview사이에 구분선 넣기 */
+    padding: 0.5em 2em; /* preview에 주었던 패딩 동일하게 줌 */
+    /* background-color: wheat; */
+    overflow-y: auto;
+  }
+  .title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1em;
+    color: green;
+  }

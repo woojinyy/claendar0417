@@ -5,6 +5,7 @@ import axios from 'axios'
 import { Button, Form, Modal } from 'react-bootstrap'
 import Datetime from 'react-datetime'
 import moment from 'moment/moment'
+import interactionPlugin from '@fullcalendar/interaction';
 
 const SchedulePage = () => {
  //오늘 이전 날짜 비활성화
@@ -13,7 +14,7 @@ const SchedulePage = () => {
      return current.isAfter(yesterday)
  }
 const [show,setShow]=useState(false)
-
+const [m_end,setM_end]=useState()
   const[memoList,setMemoList]=useState([])
 useEffect(()=>{
   axios.get("/schedule.json").then(res=>{
@@ -35,7 +36,7 @@ useEffect(()=>{
     console.log(m_end)
     setM_end(m_end)
   }
-  const handleStart=()=>{
+  const handleStart=(date)=>{
     console.log(date)
     const m_start = moment(date._d).format("YYYY-MM-DD, a h:mm")
     console.log(m_end)
@@ -47,12 +48,23 @@ useEffect(()=>{
   const memoAdd=()=>{
 
   }
+  const handleEventMouseEnter=()=>{
+
+  }
+  const handleEventMouseLeave=()=>{
+
+  }
+  const handleShow=()=>{
+    
+  }
   return (
     <>
       <FullCalendar
-        plugins={[ dayGridPlugin ]}
+        plugins={[ dayGridPlugin,interactionPlugin]}
         initialView="dayGridMonth"
         weekends={true}
+        eventMouseEnter={handleEventMouseEnter}
+        eventMouseLeave={handleEventMouseLeave}
         events={
             memoList
           }
@@ -108,7 +120,7 @@ useEffect(()=>{
           </Button>
         </Modal.Footer>
       </Modal>     
-    {/* ========================== [[ 글등록 Modal ]] ========================== */}    
+   
     </>
   )
 }

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -27,18 +27,7 @@ root.render(
     <App />
     </BrowserRouter>
     </Provider>
-=======
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-import HackerApp from "./HackerApp";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <>
-    {/*    <App /> */}
-    <HackerApp />
->>>>>>> 6d2ef25fc31fa8f49357f813c7de6ec3ae1148d2
   </>
 );
 /* HackerNews데이터를 axios가져올 때 ReacStrictMode가 있으면 두 번 요청발생

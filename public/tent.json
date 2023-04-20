@@ -1,0 +1,23 @@
+[
+    {
+      "id": 1,
+      "title": "텐트-1",
+      "content": "2-3인용 텐트",
+      "price": 20000,
+      "img": "tent1.jpg"
+    },
+    {
+      "id": 2,
+      "title": "텐트-2",
+      "content": "4~5인용 캠핑패키지",
+      "price": 50000,
+      "img": "tent2.jpg"
+    },
+    {
+      "id": 3,
+      "title": "텐트-3",
+      "content": "10인용 텐트",
+      "price": 120000,
+      "img": "tent3.jpg"
+    }
+  ]

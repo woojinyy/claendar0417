@@ -12,6 +12,7 @@ const ScheduleHeader = () => {
           <Nav className="me-auto">
             <Link to="/home" className='nav-link'>Home</Link>
             <Link to="/cal" className='nav-link'>일정관리</Link>
+            <Link to="/tent" className='nav-link'>텐트</Link>
             <Link to="/memo" className='nav-link'>메모관리</Link>
             <Link to="/schedule" className='nav-link'>스케줄관리</Link>
           </Nav>
